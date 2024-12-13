@@ -1,9 +1,9 @@
 # OSM
-Graph-Based Pathfinding Program
+## Graph-Based Pathfinding Program
 
 This program parses OpenStreetMap (OSM) data to construct a graph representation of nodes and edges and implements Dijkstra's algorithm for shortest pathfinding between two nodes. It can be used to calculate distances and find optimal routes based on the geographic data.
 
-Features
+## Features
 
 Parses .osm files using the libxml2 library.
 
@@ -15,7 +15,7 @@ Calculates distances between nodes using the Haversine formula.
 
 Outputs results, including paths and distances, to the console.
 
-Prerequisites
+## Prerequisites
 
 Before running this program, ensure you have the following installed:
 
@@ -25,7 +25,7 @@ libxml2 library
 
 A valid .osm file with geographic data
 
-Files
+## Files
 
 main.c: The main driver of the program.
 
@@ -39,23 +39,23 @@ nodes.txt: Intermediate file storing parsed nodes.
 
 edges.txt: Intermediate file storing parsed edges.
 
-Compilation
+## Compilation
 
 Compile the program using GCC with the following command:
 
 gcc main.c -I/usr/include/libxml2 -o main.out -lxml2 -lm
 
-Usage
+## Usage
 
 Run the program with the following command:
 
 ./main.out <source_node_id> <destination_node_id>
 
-Example
+## Example
 
 ./main.out 50633903 114148015
 
-How It Works
+## How It Works
 
 File Parsing:
 
@@ -75,7 +75,7 @@ Output:
 
 Prints the shortest path, intermediate nodes, and total distance to the console.
 
-Functions
+## Functions
 
 Key Functions
 
@@ -97,7 +97,7 @@ Distance Calculation:
 
 double haversine(double lat1, double lon1, double lat2, double lon2): Computes the distance between two geographic points.
 
-Error Handling
+## Error Handling
 
 The program includes basic error handling for:
 
@@ -107,20 +107,11 @@ Memory allocation failures.
 
 Invalid or missing node IDs.
 
-Future Improvements
 
-Improve error handling for malformed OSM files.
-
-Add support for additional pathfinding algorithms (e.g., A*).
-
-Optimize memory usage and performance.
-
-Create unit tests for core functionalities.
-
-Contributing
+## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-License
+## License
 
 This project is licensed under the MIT License.
